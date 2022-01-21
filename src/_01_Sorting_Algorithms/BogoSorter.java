@@ -2,6 +2,8 @@ package _01_Sorting_Algorithms;
 
 import java.util.Random;
 
+import _00_Intro_to_Sorting_Algorithms._01_SortedArrayChecker;
+
 public class BogoSorter extends Sorter {
     public BogoSorter() {
         type = "Bogo";
@@ -20,6 +22,22 @@ public class BogoSorter extends Sorter {
      */
     @Override
     void sort(int[] array, SortingVisualizer display) {
+   
+    	Random a = new Random();
+    	
+    	while(!_01_SortedArrayChecker.intArraySorted(array)) {
+    	
+        	
+        		int x1= a.nextInt(array.length);
+        		int x2 = a.nextInt(array.length);
+        		int holder = array[x1];
+        		array[x1] = array[x2];
+        		array[x2] = holder;	
+        		display.updateDisplay();
+        	
         
+    	}
+    	display.updateDisplay();
+    	
     }
 }

@@ -24,10 +24,10 @@ public class _00_SortingDemo {
         
         // This for loop puts every value in the correct position
         for (int i = 0; i < arr.length; i++) {
-            
+        	System.out.println(i);
             // This for loop puts one value in the correct position
             for (int k = 0; k < arr.length - 1; k++) {
-                
+            	
                 // If the current element is bigger than the next...
                 if( arr[k] > arr[ k+1 ] ) {
                     
@@ -35,6 +35,13 @@ public class _00_SortingDemo {
                     int temp = arr[k];
                     arr[k] = arr[ k+1 ];
                     arr[ k+1 ] = temp;
+                    
+                    
+                    /*for( int a : arr ) {
+                        System.out.print(a + " ");
+                    }
+                    System.out.println();*/
+                    
                 }
             }
         }
@@ -80,6 +87,7 @@ public class _00_SortingDemo {
                 // "a".compareTo( "b" ) => -1
                 // "b".compareTo( "a" ) => 1
                 // "b".compareTo( "b" ) => 0
+            	
                 if( arr3[k].compareTo(arr3[ k+1 ]) > 0 ) {
                     String temp = arr3[k];
                     arr3[k] = arr3[ k+1 ];
