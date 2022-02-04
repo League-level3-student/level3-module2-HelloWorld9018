@@ -1,8 +1,16 @@
 package _01_Sorting_Algorithms;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Random;
+
 import _00_Intro_to_Sorting_Algorithms._01_SortedArrayChecker;
 
+
 public class ThanosSorter extends Sorter {
+	Random ran = new Random();
+	
     public ThanosSorter() {
         type = "Thanos";
     }
@@ -47,11 +55,37 @@ public class ThanosSorter extends Sorter {
      */
     @Override
     void sort(int[] arr, SortingVisualizer display) {
+    	ArrayList<Integer> myArray = new ArrayList<Integer>();
+    	
+    	for (int i = 0; i < arr.length; i++) {
+    		myArray.add(arr[i]);
+    	}
         while(!_01_SortedArrayChecker.intArraySorted(arr)) {
-        	for(int i = 0; i < arr.length/2; i++) {
-        		arr[i] = 0;
+        	//convert int array to array list or ints
+        	
+        	//remove half of elements from array list
+        	for(int i = 0; i < myArray.size()/2; i++) {
+        		//int x = ran.nextInt(myArray.size());
+        		//myArray.remove(x);
+        		myArray.remove(i);
         		//take away randomly from remaining non-zero part of the array or from any part of the array as a whole?
         	}
+        	//change array list of ints to back to int array
+        	
+        	int zerosNeeded = arr.length - myArray.size();
+        	int num = 0;
+        	for (int i = 0; i < arr.length; i++) {
+        		if(i<zerosNeeded) {
+        			arr[i] = 0;
+        		}
+        		else {
+        			arr[i] = myArray.get(num);
+        			num++;
+        		}
+        		//arr[i] = myArray.get(i);
+        		display.updateDisplay();
+        	}
         }
+        
     }
 }
