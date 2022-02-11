@@ -32,7 +32,7 @@ class _03_SearchTest {
     	int[] myInts1 = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
         assertEquals(11, _02_BinarySearch.binarySearch(myInts1, 0, 15, 11));
         
-        int[] myInts2 = {2, 6, 5, 10, 11, 16, 20, 33, 41, 50};
+        int[] myInts2 = {2, 5, 6, 10, 11, 16, 20, 33, 41, 50};
         assertEquals(5, _02_BinarySearch.binarySearch(myInts2, 3, 6, 16));
         
         int[] myInts3 = {2, 4, 6};

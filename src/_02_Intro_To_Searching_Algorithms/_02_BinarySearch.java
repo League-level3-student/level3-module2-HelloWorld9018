@@ -20,7 +20,7 @@ public class _02_BinarySearch {
     	int location = -1;
     	
     	if(end>= start) {
-    		int mid = (end-start)/2;
+    		int mid = start + (end-start)/2;
     		if(array[mid] == value) {
     			location = mid;
     		}
