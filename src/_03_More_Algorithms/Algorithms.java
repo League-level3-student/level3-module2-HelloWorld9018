@@ -90,7 +90,37 @@ public class Algorithms {
 		return results;
 	}
 	
+	public static Object sortDNA(List<String> unsortedSequences) {
+		// TODO Auto-generated method stub
+		for(int a = 0; a<unsortedSequences.size(); a++) {
+			for(int b = 0; b<unsortedSequences.size()-1; b++) {
+				if(unsortedSequences.get(b).length() > unsortedSequences.get(b+1).length()) {
+					String holder = unsortedSequences.get(b);
+					unsortedSequences.set(b, unsortedSequences.get(b+1));
+					unsortedSequences.set(b+1, holder);
+				}
+			}
+		}
+		return unsortedSequences;
+	}
     
+	
+	public static List<String> sortWords(List<String> words) {
+		// TODO Auto-generated method stub
+		for(int a = 0; a<words.size(); a++) {
+			for(int b = 0; b<words.size()-1; b++) {
+				if(words.get(b).compareTo(words.get(b+1))>0) {
+					String holder = words.get(b);
+					words.set(b, words.get(b+1));
+					words.set(b+1, holder);
+					
+				}
+			}
+		}
+		return words;
+	}
+
+	
 // MATH ALGORITHMS
     
     public static String multiply(int num1, int num2) {
@@ -133,5 +163,7 @@ public class Algorithms {
 		return false;
 		}
 	}
+
+
 
 }
