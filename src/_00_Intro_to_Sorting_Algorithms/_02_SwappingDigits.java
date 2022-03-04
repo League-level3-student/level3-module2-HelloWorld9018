@@ -35,6 +35,7 @@ class _02_SwappingDigits {
     	System.out.println(sortedArr[i]+"\n");
     	}
     	int middle = (arr.length-1) / 2;
+    	// 0 1 2 3 4 5
     	System.out.println(middle);
     	int medianValue = sortedArr[middle];
     	System.out.println(medianValue);

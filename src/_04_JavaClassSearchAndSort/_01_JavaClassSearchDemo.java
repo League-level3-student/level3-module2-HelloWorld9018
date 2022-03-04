@@ -14,7 +14,7 @@ public class _01_JavaClassSearchDemo {
          * elements with the specified value, there is no guarantee which one
          * will be found.
          * 
-         * -Use the Arrays.binarySearch(arr) method in the Arrays class to
+         * -Use the Arrays.binarySearch(arr, element) method in the Arrays class to
          * search for an element in a SORTED array. 
          * 
          * -Use the Collections.binarySearch(list, key) in the Collections
@@ -55,7 +55,7 @@ public class _01_JavaClassSearchDemo {
         // Sort first, then search
         Collections.sort(stringList);
         index = Collections.binarySearch(stringList, "d");
-        
+
         System.out.println("Search ArrayList using the Collections class:");
         
         for( String str : stringList ) {
